@@ -2,7 +2,7 @@ module savearry
     implicit none
 
     contains
-    subroutine saveNdreal(arr,fil,Nrows,Ncols)
+    subroutine saveNdreal(arr,fil,Nrows)
         ! This function saves an Nd array to a
         ! a .txt file. Filename is inputted as fil
         ! array. 
@@ -10,7 +10,7 @@ module savearry
 
         character(len=*), intent(in) :: fil
         real,dimension(:,:),intent(in) ::  arr(:,:)
-        integer :: Nrows,Ncols,i
+        integer :: Nrows,i
 
         open(unit=1,file=fil,action='write')
 
